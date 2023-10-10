@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <title>Sam's Portfolio</title>
+      <link rel="stylesheet" href="main.css">
+      <style type="text/css">
+      </style>
+   </head>
+   <body>
+      <div class="main-container">
+         <div class="about-navbar">
+            <ul>
+               <li><a href="index.html">Home</a></li>
+               <li><a href="About-me.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+              
+               <li><a href="Contact-me.html">Contact Me</a></li>
+               
+            </ul>
+         </div>
+         <div class="about-image-banner">
+          
+         </div>
+         <div class="main-body">
+              <h4>Contact Me</h4>
+              <form id="ContactForm">
+                <div>
+                    <label for="FullName">Full Name</label>
+                    <input type="text" id="FullName" placeholder="Enter your Full Name">
+                </div>
+                <div>
+                    <label for="TelNo">Telphone No</label>
+                    <input type="text" id="TelNo" placeholder="Enter your Telphone Number">
+                </div>
+                <div>
+                <label for="Email">Email Address</label>
+                <input type="email" id="Email" placeholder="Enter your Email Address">
+            </div>
+
+            <div>
+                <label for="Message">Your Message</label>
+                <textarea placeholder="Your Message"  id="Message"></textarea>
+                </div>
+            <button type="submit">Send your Message</button>
+              </form>
+        
+         </div>
+
+         <script>
+            document.getElementById("ContactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+
+                // Get form input values
+                const fullName = document.getElementById("FullName").value;
+                const telNo = document.getElementById("TelNo").value;
+                const email = document.getElementById("Email").value;
+                const message = document.getElementById("Message").value;
+        
+                // Create a URL to display the collected data on another page
+                const displayURL = `feedback.html?fullname=${fullName}&telno=${telNo}&email=${email}&message=${message}`;
+        
+                // Open the display page in a new tab or window
+                window.open(displayURL, "_blank");
+            });
+        </script>
+        
+        
+   </body>
+ 
+   </div>
+   
+</html>
